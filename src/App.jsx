@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import AccordionPlayer from './component/AccordionPlayer'
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import SettingsPage from "./component/SettingsPage";
+import GamePage from "./component/GamePage";
+import allWords from '../public/parole.json'
+import { updateAllWords } from "./features/playerSlice";
 
 function App() {
-  const players = useSelector((state) => state.player.playerNames)
-  return (
-    <div style={{height: '100dvh', width: '100vw'}}>
-      <AccordionPlayer/>
-    </div>
-  )
+
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+    dispatch(updateAllWords(allWords))
+  }, [])
+
+  const gameStarted = useSelector((state) => state.player.gameStarted);
+  return <>{gameStarted ? <GamePage /> : <SettingsPage />}</>;
 }
 
-export default App
+export default App;

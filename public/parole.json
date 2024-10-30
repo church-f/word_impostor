@@ -1,0 +1,25 @@
+{
+    "Geografia": [
+      "montagna", "fiume", "deserto", "lago", "oceano", "valle", "isola", "collina", "vulcano", "foresta",
+      "prateria", "grotta", "cascata", "tundra", "gola", "penisola", "savana", "baia", "laguna", "stretto",
+      "canale", "deltapiano", "palude", "arco naturale", "atollo", "fiordo", "promontorio", "spiaggia", "ghiacciaio",
+      "golfo"
+    ],
+    "Tempo libero": [
+      "cinema", "lettura", "viaggio", "fotografia", "cucina", "giardinaggio", "pittura", "escursionismo", "collezionismo", "ballo",
+      "scrittura", "musica", "scultura", "videogiochi", "puzzle", "ciclismo", "yoga", "modellismo", "birdwatching", "caccia al tesoro",
+      "meditazione", "fai da te", "camping", "shopping", "nuoto", "teatro", "ceramica", "artigianato", "astronomia", "pesca"
+    ],
+    "Sport": [
+      "calcio", "basket", "tennis", "pallavolo", "rugby", "atletica", "nuoto", "ginnastica", "ciclismo", "sci",
+      "snowboard", "pallanuoto", "judo", "karate", "taekwondo", "golf", "baseball", "hockey", "pattinaggio", "canottaggio",
+      "cricket", "softball", "pallamano", "arrampicata", "vela", "motocross", "triathlon", "surf", "boxe", "ping pong"
+    ],
+    "Fantasia": [
+      "drago", "elfo", "magia", "spada incantata", "unicorno", "strega", "incantesimo", "guerriero", "fata", "troll",
+      "castello", "cavaliere", "sirena", "pietra magica", "fantasma", "portale", "lupo mannaro", "arco magico", "golem", "goblin",
+      "araba fenice", "medaglione", "varco temporale", "nave volante", "oracolo", "lampada magica", "mondo parallelo", "magia oscura",
+      "bosco incantato", "anello dei poteri"
+    ]
+  }
+  
