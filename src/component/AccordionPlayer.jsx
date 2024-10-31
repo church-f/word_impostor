@@ -51,15 +51,7 @@ export default function AccordionPlayer(props) {
         >
           <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
             <Typography style={{display: 'flex', alignItems: 'center'}}>Giocatori</Typography>
-            <IconButton
-              variant="contained"
-              onClick={(e) => {
-                dispatch(addPlayer(`Giocatore_${players.length}`));
-                e.stopPropagation();
-              }}
-            >
-              <AddIcon color="primary"/>
-            </IconButton>
+            
           </div>
         </AccordionSummary>
         <AccordionDetails>
@@ -97,6 +89,16 @@ export default function AccordionPlayer(props) {
               )}
             </Droppable>
           </DragDropContext>
+          <IconButton
+              variant="contained"
+              sx={{width: '100%'}}
+              onClick={(e) => {
+                dispatch(addPlayer(`Giocatore_${players.length}`));
+                e.stopPropagation();
+              }}
+            >
+              <AddIcon color="primary"/>
+            </IconButton>
         </AccordionDetails>
       </Accordion>
     </>

@@ -13,7 +13,7 @@ export default function Timer(props) {
   const timerInMilli = timerInMinutes * 1000 * 60;
 
   const renderer = ({ hours, minutes, seconds, completed, api }) => {
-    if (completed || api.isStopped()) {
+    if (completed || api.isPaused()) {
       return (
         <>
           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
@@ -51,13 +51,13 @@ export default function Timer(props) {
     } else {
       return (
         <>
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems: 'center', gap: '10px'}}>
 
           <AccessAlarmIcon fontSize="large" />
-          <Typography variant="h6">
+          <Typography variant="h2">
             {minutes}:{seconds > 9 ? seconds : `0${seconds}`}
           </Typography>
-          <Button size="large" variant="contained" color="error" onClick={()=>{api.stop()}} >Stop</Button>
+          <Button size="large" variant="contained" color="error" onClick={()=>{api.isStarted() ? api.pause()  :api.start()}} >{api.isStarted() ? 'Stop' : 'Inizio'}</Button>
         </div>
         </>
       );
@@ -67,7 +67,7 @@ export default function Timer(props) {
   return (
     <>
       <div style={{ display: "flex", gap: "10px" }}>
-        <Countdown date={Date.now() + timerInMilli} renderer={renderer} />
+        <Countdown date={Date.now() + timerInMilli} renderer={renderer} autoStart={false}/>
       </div>
     </>
   );

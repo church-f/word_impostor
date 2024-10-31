@@ -9,7 +9,7 @@ export const playerSlice = createSlice({
     impostorName: null,
     gameStarted: false,
     secretWord: "",
-    selectedWordCategories: ["Geografia", "Tempo libero", "Sport", "Fantasia"],
+    selectedWordCategories: ["Geografia", "Tempo libero", "Sport", "Fantasia", "Speciali"],
     allWords: {},
     timerInMinutes: 2,
   },

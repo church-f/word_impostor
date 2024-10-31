@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import TouchAppIcon from '@mui/icons-material/TouchApp';
 
 export default function CardRole(props) {
   const secretWord = useSelector((state) => state.player.secretWord);
@@ -12,6 +13,12 @@ export default function CardRole(props) {
   const [colorToShow, setColorToShow] = useState("textPrimary");
   //textPrimary, error, info
   const [isShowingName, setIsSowingName] = useState(true);
+
+  const colorMap = {
+    "textPrimary": "#000",
+    "error": "#ff3224",
+    "info": "#24bdff"
+  }
 
   const changeText = () => {
     if (isShowingName) {
@@ -38,7 +45,7 @@ export default function CardRole(props) {
         onClick={() => {
           changeText();
         }}
-        sx={{ width: "75%", height: "40%" }}
+        sx={{ width: "75%", height: "40%", border: `2px solid ${colorMap[colorToShow]}`, boxShadow: '0px 0px 30px #707070'}}
         style={{ display: "flex", alignItems: "center" }}
       >
         <CardContent style={{ display: "flex", alignItems: "center" }}>

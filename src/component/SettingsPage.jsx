@@ -32,44 +32,49 @@ export default function SettingsPage(props) {
   // }
   return (
     <>
-    <div style={{display: 'flex', gap: '10px', flexDirection: 'column'}}>
+      <div style={{height: '98dvh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
 
-      <AccordionPlayer />
-      <CounterComponent 
-        title='Impostori'
-        counterState='impostorCounter'
-        incrementFunction={dispatch(incremerntImpostor)}
-        decrementFunction={dispatch(decrementImpostor)}
-      />
-      <CounterComponent
-        title="Timer"
-        counterState="timerInMinutes"
-        incrementFunction={dispatch(incrementTimer)}
-        decrementFunction={dispatch(decrementTimer)}
-      />
-      <AccordionCategory/>
-    </div>
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Button
-          onClick={() => {
-            // getWord()
-            dispatch(newGame());
-            dispatch(updateGameState(true));
+
+        <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
+
+          <AccordionPlayer />
+          <CounterComponent
+            title='Impostori'
+            counterState='impostorCounter'
+            incrementFunction={dispatch(incremerntImpostor)}
+            decrementFunction={dispatch(decrementImpostor)}
+          />
+          <CounterComponent
+            title="Timer (minuti)"
+            counterState="timerInMinutes"
+            incrementFunction={dispatch(incrementTimer)}
+            decrementFunction={dispatch(decrementTimer)}
+          />
+          <AccordionCategory />
+        </div>
+        <div
+          style={{
+            // position: "absolute",
+            // bottom: 0,
+            marginTop: '20px',
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
-          variant="contained"
-          size="large"
         >
-          Gioca
-        </Button>
+          <Button
+            onClick={() => {
+              // getWord()
+              dispatch(newGame());
+              dispatch(updateGameState(true));
+            }}
+            variant="contained"
+            size="large"
+          >
+            Gioca
+          </Button>
+        </div>
       </div>
     </>
     // </div>
