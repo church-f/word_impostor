@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import SettingsPage from "./component/SettingsPage";
-import GamePage from "./component/GamePage";
+import SettingsPage from "./component/settings_page/SettingsPage";
+import GamePage from "./component/game_page/GamePage";
 import allWords from '../public/parole.json'
 import { updateAllWords } from "./features/playerSlice";
 
