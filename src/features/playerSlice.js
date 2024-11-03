@@ -4,7 +4,6 @@ export const playerSlice = createSlice({
   name: "player",
   initialState: {
     playerNames: ["cri", "leti", "flavio", "nicolas"],
-    playerCounter: 4,
     impostorCounter: 1,
     impostorName: null,
     gameStarted: false,
@@ -12,18 +11,13 @@ export const playerSlice = createSlice({
     selectedWordCategories: ["Geografia", "Tempo libero", "Sport", "Fantasia", "Speciali"],
     allWords: {},
     timerInMinutes: 2,
+    impostorKnowImpostors: false
   },
   reducers: {
-    incrementPlayer: (state) => {
-      state.playerCounter += 1;
-    },
     incremerntImpostor: (state) => {
       if (state.impostorCounter < state.playerNames.length) {
         state.impostorCounter += 1;
       }
-    },
-    decrementPlayer: (state) => {
-      state.playerCounter -= 1;
     },
     decrementImpostor: (state) => {
       if (state.impostorCounter > 1) {
@@ -89,6 +83,9 @@ export const playerSlice = createSlice({
     decrementTimer: (state) => {
       if (state.timerInMinutes > 1) state.timerInMinutes -= 1;
     },
+    updateImpostorKnowImpostors: (state, action) =>{
+      state.impostorKnowImpostors = action.payload
+    }
   },
 });
 
@@ -108,5 +105,6 @@ export const {
   updateAllWords,
   incrementTimer,
   decrementTimer,
+  updateImpostorKnowImpostors
 } = playerSlice.actions;
 export default playerSlice.reducer;

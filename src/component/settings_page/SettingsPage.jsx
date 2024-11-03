@@ -6,26 +6,19 @@ import {
   incrementTimer,
   newGame,
   updateGameState,
-  updateSecretWord,
 } from "../../features/playerSlice";
-import { useSelector } from "react-redux";
 import CounterComponent from "../CounterComponent";
 import { incremerntImpostor, decrementImpostor } from "../../features/playerSlice";
 import AccordionCategory from "./AccordionCategory";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import { useState } from "react";
+import AdvancedSettings from "./advanced_settings/AdvancedSettings";
 
 
 export default function SettingsPage(props) {
   const dispatch = useDispatch();
-  // const getWord = () =>{
-  //     let finalList = []
-  //     Object.keys(allWords).forEach((category)=>{
-  //         if(selectedCategories.includes(category)){
-  //             finalList = finalList.concat(allWords[category])
-  //         }
-  //     })
-  //     let randomWord = finalList[Math.floor(Math.random() * finalList.length)]
-  //     dispatch(updateSecretWord(randomWord))
-  // }
+  const [showAdvancedSettings, setShowAdvancedSettings] = useState(false)
   return (
     <>
       <div style={{height: '98dvh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
@@ -37,16 +30,26 @@ export default function SettingsPage(props) {
           <CounterComponent
             title='Impostori'
             counterState='impostorCounter'
-            incrementFunction={dispatch(incremerntImpostor)}
-            decrementFunction={dispatch(decrementImpostor)}
+            incrementFunction={()=>{dispatch(incremerntImpostor())}}
+            decrementFunction={()=>{dispatch(decrementImpostor())}}
           />
           <CounterComponent
             title="Timer (minuti)"
             counterState="timerInMinutes"
-            incrementFunction={dispatch(incrementTimer)}
-            decrementFunction={dispatch(decrementTimer)}
+            incrementFunction={()=>{dispatch(incrementTimer())}}
+            decrementFunction={()=>{dispatch(decrementTimer())}}
           />
+          
           <AccordionCategory />
+
+          <FormControlLabel control={<Switch checked={showAdvancedSettings} 
+            onChange={(e)=>{
+              setShowAdvancedSettings(e.currentTarget.checked)
+            }}
+          />} label="Mostra impostazioni avanzate" />
+
+            {showAdvancedSettings ? <AdvancedSettings/> : ''}
+
         </div>
         <div
           style={{

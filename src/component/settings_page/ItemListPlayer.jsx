@@ -1,10 +1,9 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import { useSelector, useDispatch } from "react-redux";
-import { removePlayer, updatePlayers } from "../features/playerSlice";
+import { removePlayer, updatePlayers } from "../../features/playerSlice";
 import TextField from "@mui/material/TextField";
 
 export default function ItemPlayerList(props) {

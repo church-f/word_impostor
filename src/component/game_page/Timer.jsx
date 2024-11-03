@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 import { Typography } from "@mui/material";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import { useDispatch } from "react-redux";
-import { newGame, updateGameState } from "../features/playerSlice";
+import { newGame, updateGameState } from "../../features/playerSlice";
 import { useSelector } from "react-redux";
 
 export default function Timer(props) {

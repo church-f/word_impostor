@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Checkbox from "@mui/material/Checkbox";
 import { useDispatch } from "react-redux";
 import { updateSelectedWordCategories } from "../../features/playerSlice";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
 export default function AccordionCategory(props) {
     const dispatch = useDispatch()
@@ -50,21 +51,17 @@ export default function AccordionCategory(props) {
         {allCategories.map((cat) => {
           return (
             <>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <Checkbox
+              
+              <FormControlLabel control={<Checkbox
                   checked={selectedWordCategories.includes(cat)}
                   onChange={(e) => {
                     handleChange(e, cat);
                   }}
-                />
-                <Typography>{cat}</Typography>
-              </div>
+                />}
+                
+                label={cat}/>
+                
+              
             </>
           );
         })}
