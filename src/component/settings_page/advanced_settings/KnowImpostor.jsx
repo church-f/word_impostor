@@ -23,7 +23,7 @@ export default function KnowImpostor(props) {
                 }}
               />
             }
-            label="Gli impostori si conoscono"
+            label={t("Gli impostori si conoscono")}
           />
         </CardContent>
       </Card>

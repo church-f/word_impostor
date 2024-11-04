@@ -8,6 +8,8 @@ import Checkbox from "@mui/material/Checkbox";
 import { useDispatch } from "react-redux";
 import { updateSelectedWordCategories } from "../../features/playerSlice";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { useTranslation } from "react-i18next";
+
 
 export default function AccordionCategory(props) {
     const dispatch = useDispatch()
@@ -43,7 +45,7 @@ export default function AccordionCategory(props) {
           }}
         >
           <Typography style={{ display: "flex", alignItems: "center" }}>
-            Categorie
+            {t('Categorie')}
           </Typography>
         </div>
       </AccordionSummary>
@@ -59,7 +61,7 @@ export default function AccordionCategory(props) {
                   }}
                 />}
                 
-                label={cat}/>
+                label={t(cat)}/>
                 
               
             </>

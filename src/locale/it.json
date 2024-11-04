@@ -1,5 +1,23 @@
 {
   "translation": {
-    "Giocatori": "Giocatori"
+    "Giocatori": "Giocatori",
+    "Impostori": "Impostori",
+    "Timer (minuti)": "Timer (minuti)",
+    "Categorie": "Categorie",
+    "Mostra impostazioni avanzate": "Mostra impostazioni avanzate",
+    "Gioca": "Gioca",
+    "Gli impostori si conoscono": "Gli impostori si conoscono",
+    "Geografia": "Geografia", 
+    "Tempo libero": "Tempo libero", 
+    "Sport": "Sport", 
+    "Fantasia": "Fantasia", 
+    "Speciali": "Speciali",
+    "Nome giocatore": "Nome giocatore",
+    "Impostore": "Impostore",
+    "Inizio": "Inizio",
+    "Gioca ancora": "Gioca ancora",
+    "Vai alle impostazioni": "Vai alle impostazioni",
+    "Altri impostori": "Altri impostori"
+
   }
 }

@@ -27,7 +27,7 @@ export default function CardRole(props) {
   const changeText = () => {
     if (isShowingName) {
       if (props.impostorsName.includes(props.players[playerIndex])) {
-        setTextToShow("Impostore");
+        setTextToShow(t("Impostore"));
         setColorToShow("error");
         setIsImpostor(true)
       } else {

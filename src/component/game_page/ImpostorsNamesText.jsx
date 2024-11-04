@@ -5,7 +5,7 @@ export default function ImpostorsNamesText(props){
     return(
         <>
             <Typography>
-                Altri impostori: {
+                {t('Altri impostori')}: {
                     props.impostorsName.map((name)=>{
                         if(name !== props.currentName)
                         return name
