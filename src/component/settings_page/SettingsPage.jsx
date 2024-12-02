@@ -14,6 +14,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { useState } from "react";
 import AdvancedSettings from "./advanced_settings/AdvancedSettings";
+import PositionedMenu from "../Menu";
 
 
 export default function SettingsPage(props) {
@@ -21,7 +22,10 @@ export default function SettingsPage(props) {
   const [showAdvancedSettings, setShowAdvancedSettings] = useState(false)
   return (
     <>
-      <div style={{height: '98dvh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+      <div>
+        <PositionedMenu/>
+      </div>
+      <div style={{height: '90dvh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
 
 
         <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
