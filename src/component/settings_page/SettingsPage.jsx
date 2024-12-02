@@ -50,7 +50,7 @@ export default function SettingsPage(props) {
             onChange={(e)=>{
               setShowAdvancedSettings(e.currentTarget.checked)
             }}
-          />} label="Mostra impostazioni avanzate" />
+          />} label={t("Mostra impostazioni avanzate")} />
 
             {showAdvancedSettings ? <AdvancedSettings/> : ''}
 
@@ -75,7 +75,7 @@ export default function SettingsPage(props) {
             variant="contained"
             size="large"
           >
-            Gioca
+            {t('Gioca')}
           </Button>
         </div>
       </div>

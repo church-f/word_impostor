@@ -15,7 +15,7 @@ export default function CounterComponent(props) {
   return (
     <Card>
       <CardContent style={{display: 'flex', justifyContent: 'space-between', padding: '12px 16px'}}>
-        <Typography style={{display: 'flex', alignItems: 'center'}} >{props.title}</Typography>
+        <Typography style={{display: 'flex', alignItems: 'center'}} >{t(props.title)}</Typography>
 
         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
           <IconButton

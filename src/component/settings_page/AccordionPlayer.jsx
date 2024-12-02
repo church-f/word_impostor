@@ -12,6 +12,8 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 import ItemPlayerList from "./ItemListPlayer";
 
+import { useTranslation } from "react-i18next";
+
 const getListStyle = (isDraggingOver) => ({
   background: isDraggingOver ? "lightblue" : "#fff",
   padding: 2,
@@ -28,9 +30,10 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   ...draggableStyle,
 });
 
-export default function AccordionPlayer(props) {
+export default function xAccordionPlayer(props) {
   const players = useSelector((state) => state.player.playerNames);
   const dispatch = useDispatch();
+  const {t} = useTranslation()
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -50,7 +53,7 @@ export default function AccordionPlayer(props) {
           id="panel1-header"
         >
           <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
-            <Typography style={{display: 'flex', alignItems: 'center'}}>Giocatori</Typography>
+            <Typography style={{display: 'flex', alignItems: 'center'}}>{t('Giocatori')}</Typography>
             
           </div>
         </AccordionSummary>

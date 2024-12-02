@@ -18,7 +18,7 @@ export default function Timer(props) {
         <>
           <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <Typography variant="h4">Impostori: </Typography>
+              <Typography variant="h4">{t('Impostori')}: </Typography>
               <Typography
                 variant="h4"
                 color="error"
@@ -36,14 +36,14 @@ export default function Timer(props) {
                 props.setEndedNames(false);
               }}
             >
-              Gioca ancora
+              {t('Gioca ancora')}
             </Button>
             <Button
               onClick={() => {
                 dispatch(updateGameState(false));
               }}
             >
-              ← vai alle impostazioni
+              ← {t('Vai alle impostazioni')}
             </Button>
           </div>
         </>
@@ -57,7 +57,7 @@ export default function Timer(props) {
           <Typography variant="h2">
             {minutes}:{seconds > 9 ? seconds : `0${seconds}`}
           </Typography>
-          <Button size="large" variant="contained" color="error" onClick={()=>{api.isStarted() ? api.pause()  :api.start()}} >{api.isStarted() ? 'Stop' : 'Inizio'}</Button>
+          <Button size="large" variant="contained" color="error" onClick={()=>{api.isStarted() ? api.pause()  :api.start()}} >{api.isStarted() ? t('Stop') : t('Inizio')}</Button>
         </div>
         </>
       );

@@ -29,7 +29,7 @@ export default function ItemPlayerList(props) {
             {/* <Typography>{props.player}</Typography> */}
             <TextField
               id="outlined-basic"
-              label="Nome giocatore"
+              label={t("Nome giocatore")}
               variant="outlined"
               value={props.player}
               onChange={(event) => {handleChange(event)}}
