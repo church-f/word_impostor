@@ -5,6 +5,8 @@ import store from './app/store.js'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutUs from './component/aboutUs_page/AboutUs.jsx'
+import PrivacyPolicy from './component/privacyPolicy_page/privacyPolicy.jsx'
+
 
 createRoot(document.getElementById('root')).render(
     <Provider store={store}>
@@ -12,6 +14,8 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={<App />}/>
           <Route path='/about-us' element={<AboutUs />}/>
+          <Route path='/about-us' element={<AboutUs />}/>
+          <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
         </Routes>
       </Router>
     </Provider>
