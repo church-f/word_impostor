@@ -45,7 +45,7 @@ export default function PositionedMenu() {
             >
                 <MenuItem onClick={()=>{handleClose; window.location.pathname = "/"}}>Home</MenuItem>
                 <MenuItem onClick={() => { handleClose; window.location.pathname = "/about-us" }}>{t('Chi siamo')}</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={()=>{handleClose; window.location.pathname = "/privacy-policy"}}>Privacy policy</MenuItem>
             </Menu>
         </div>
     );
