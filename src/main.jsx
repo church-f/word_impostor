@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutUs from './component/aboutUs_page/AboutUs.jsx'
 import PrivacyPolicy from './component/privacyPolicy_page/privacyPolicy.jsx'
+import ContactUs from './component/contactUs_page/ContactUs.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -14,7 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={<App />}/>
           <Route path='/about-us' element={<AboutUs />}/>
-          <Route path='/about-us' element={<AboutUs />}/>
+          <Route path='/contact-us' element={<ContactUs />}/>
           <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
         </Routes>
       </Router>
