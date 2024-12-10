@@ -28,9 +28,9 @@ export default function PositionedMenu() {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                <MenuIcon />
-            </IconButton>
             <Hamburger size={20} onToggle={(val)=>{setAnchorEl(val)}} toggled={anchorEl}/>
+                {/* <MenuIcon /> */}
+            </IconButton>
             <Menu
                 id="demo-positioned-menu"
                 aria-labelledby="demo-positioned-button"
