@@ -5,7 +5,7 @@ import store from './app/store.js'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutUs from './component/aboutUs_page/AboutUs.jsx'
-import PrivacyPolicy from './component/privacyPolicy_page/privacyPolicy.jsx'
+import PrivacyPolicy from './component/privacyPolicy_page/PrivacyPolicy.jsx'
 import ContactUs from './component/contactUs_page/ContactUs.jsx'
 
 
