@@ -36,13 +36,14 @@ export default function ContactUs() {
       <div style={{ padding: '20px' }}>
         <Typography variant="h4">{t("Contattaci")}</Typography>
         <Typography style={{ marginTop: "20px" }}>
-          {t("PPPrimo testo")}
+          {t("Contattaci testo")}
+          <a href="mailto:wordimpostor@gmail.com"> wordimpostor@gmail.com</a>
         </Typography>
 
-        <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }} >
+        <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '40px' }} >
           <TextField id="standard-basic" label={t('Nome')} variant="outlined" name="user_name" />
           <TextField id="standard-basic" label={t('Email')} variant="outlined" name="user_email" />
-          <TextArea minRows={3} placeholder={t('Messaggio')} name="message" />
+          <TextArea minRows={3} placeholder={t('Messaggio')} name="message" style={{width: '100%'}}/>
           <Button type='submit' variant='contained'>
             {t('Invia')}
           </Button>

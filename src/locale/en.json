@@ -33,6 +33,11 @@
     "PPQuinto testo": "This Privacy Policy may be updated periodically to reflect regulatory or functional changes. We encourage you to review it regularly to stay informed.",
     "PPSesto titolo": "6. User Rights",
     "PPSesto testo": "Since we do not collect personal data, we are not required to provide access, rectification, or deletion of any information. However, we are available for any clarification via email.",
-    "Inizia a giocare!": "Start to play"
+    "Inizia a giocare!": "Start to play!",
+    "Contattaci": "Contact us",
+    "Contattaci testo": "If you have any questions, suggestions, or need assistance, you can use the form below to get in touch with us. Fill out the required fields, and we’ll get back to you as soon as possible! Alternatively, you can email us directly at",
+    "Nome": "Name",
+    "Messaggio": "Message",
+    "Invia": "Send"
   }
 }
