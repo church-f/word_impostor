@@ -3,21 +3,37 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { useTranslation } from "react-i18next";
 import Divider from '@mui/material/Divider';
 import { Turn as Hamburger } from 'hamburger-react'
+import It from '../../public/bandiere/it.png'
+import En from '../../public/bandiere/en.png'
+import Select from '@mui/material/Select';
 
 export default function PositionedMenu() {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+    const [selectedLen, setSelectedLen] = React.useState(i18n.language)
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
     };
+    const allLen = [
+        {
+            label: "Italy",
+            src: It,
+            value: 'it'
+        },
+        {
+            label: "Uk/Us",
+            src: En,
+            value: 'en'
+        }
+    ]
 
     return (
         <div>
@@ -51,6 +67,22 @@ export default function PositionedMenu() {
                 <MenuItem onClick={() => { handleClose; window.location.pathname = "/contact-us" }}>{t('Contattaci')}</MenuItem>
                 <Divider sx={{ my: 0.5 }} />
                 <MenuItem onClick={()=>{handleClose; window.location.pathname = "/privacy-policy"}}>Privacy policy</MenuItem>
+                <Divider sx={{ my: 0.5 }} />
+                <MenuItem>
+                    <Select
+                    value={selectedLen}
+                    onChange={(e)=>{
+                        i18n.changeLanguage(e.target.value)
+                        setSelectedLen(e.target.value)
+                    }}
+                    >
+                        {allLen.map((option, key) => (
+                            <MenuItem value={option.value} key={key}>
+                                <img src={option.src} alt={option.label} />
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </MenuItem>
             </Menu>
         </div>
     );
