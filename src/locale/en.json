@@ -1,5 +1,4 @@
 {
-  "translation": {
     "Giocatori": "Players",
     "Impostori": "Impostors",
     "Timer (minuti)": "Timer (minutes)",
@@ -39,5 +38,4 @@
     "Nome": "Name",
     "Messaggio": "Message",
     "Invia": "Send"
-  }
 }

@@ -8,6 +8,7 @@ import Divider from '@mui/material/Divider';
 import { Turn as Hamburger } from 'hamburger-react'
 import It from '../../public/bandiere/it.png'
 import En from '../../public/bandiere/en.png'
+import Pt from '../../public/bandiere/pt.png'
 import Select from '@mui/material/Select';
 
 export default function PositionedMenu() {
@@ -32,6 +33,11 @@ export default function PositionedMenu() {
             label: "Uk/Us",
             src: En,
             value: 'en'
+        },
+        {
+            label: "Uk/Us",
+            src: Pt,
+            value: 'pt'
         }
     ]
 
