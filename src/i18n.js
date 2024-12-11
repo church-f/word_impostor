@@ -24,14 +24,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-   // detection: options,
-   //  ns: ['common'],
-   //  defaultNS: 'common',
+   detection: options,
     fallbackLng: 'en',
-   //  supportedLngs: ['it', 'en', 'pt'],
-   //  interpolation: {
-   //    escapeValue: false,
-   //  },
+    whitelist: ['it', 'en', 'pt'],
     debug: true,
     resources: {
       en: { translation: { ...enJSON } },
