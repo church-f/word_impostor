@@ -4,7 +4,9 @@ import itJSON from "./locale/it.json";
 import enJSON from "./locale/en.json";
 import ptJSON from "./locale/pt.json";
 import LanguageDetector from "i18next-browser-languagedetector";
-import XHR from "i18next-http-backend"
+
+import enParole from './locale/parole/en.json'
+import ptParole from './locale/parole/pt.json'
 
 const options = {
   order: [
@@ -29,9 +31,9 @@ i18n
     whitelist: ['it', 'en', 'pt'],
     debug: true,
     resources: {
-      en: { translation: { ...enJSON } },
+      en: { translation: { ...enJSON, ...enParole } },
       it: { translation: { ...itJSON } },
-      pt: { translation: { ...ptJSON } },
+      pt: { translation: { ...ptJSON, ...ptJSON } },
     },
    //   lng: "it",
   });

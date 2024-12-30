@@ -61,7 +61,7 @@ export default function CardRole(props) {
       >
         <CardContent style={{ display: "flex", alignItems: "center", flexDirection: 'column', gap: '10px', justifyContent: 'center' }}>
           <Typography variant="h3" color={colorToShow}>
-            {textToShow}
+            {t(textToShow)}
           </Typography>
 
           {impostorKnowImpostors &&
