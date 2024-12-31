@@ -15,7 +15,7 @@ export default function PositionedMenu() {
     const { t, i18n } = useTranslation()
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    const [selectedLen, setSelectedLen] = React.useState(i18n.language)
+    const [selectedLen, setSelectedLen] = React.useState(i18n.resolvedLanguage)
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

@@ -37,5 +37,17 @@
   "Contattaci testo": "Se você tiver alguma dúvida, sugestão ou precisar de ajuda, pode utilizar o formulário abaixo para entrar em contato conosco.  Preencha os campos obrigatórios e responderemos o mais breve possível!  Alternativamente, você pode nos escrever diretamente para o endereço de e-mail.",
   "Nome": "Nome",
   "Messaggio": "Mensajem",
-  "Invia": "Enviar"
+  "Invia": "Enviar",
+  "Regole": "Regras",
+  "titolo regole": "Como jogar Word Impostor",
+  "sottotitolo regole": "Um jogo de intuição, blefe e dedução",
+  "testo finale regole": "Você conseguirá descobrir o blefe ou passará despercebido?",
+  "nome paragrafo 1 regole": "A Palavra Secreta",
+  "testo paragrafo 1 regole": "O site escolhe uma palavra secreta. Todos os jogadores conhecem essa palavra, exceto os impostores. Ninguém sabe quem são os impostores.",
+  "nome paragrafo 2 regole": "O Temporizador",
+  "testo paragrafo 2 regole": "Assim que os papéis são revelados, um temporizador começa. A partir desse momento, os jogadores começam a fazer perguntas uns aos outros sobre a palavra secreta.",
+  "nome paragrafo 3 regole": "O Objetivo",
+  "testo paragrafo 3 regole": "Os jogadores devem descobrir quem é o impostor fazendo perguntas e ouvindo as respostas. Os impostores devem tentar adivinhar a palavra secreta sem serem descobertos.",
+  "nome paragrafo 4 regole": "Acusações e Vitória",
+  "testo paragrafo 4 regole": "Antes que o temporizador acabe, os jogadores podem acusar aqueles que acreditam serem impostores. Se as acusações estiverem corretas, os jogadores vencem. Caso contrário, os impostores vencem. A qualquer momento, um impostor pode se revelar e tentar adivinhar a palavra. Se acertar, os impostores vencem imediatamente. Se errar, o impostor é eliminado e o jogo continua até que o temporizador acabe, quando os jogadores ainda devem acusar os impostores para vencer."
 }

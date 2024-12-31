@@ -5,6 +5,7 @@ import enJSON from "./locale/en.json";
 import ptJSON from "./locale/pt.json";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+
 import enParole from './locale/parole/en.json'
 import ptParole from './locale/parole/pt.json'
 
@@ -27,13 +28,13 @@ i18n
   .use(initReactI18next)
   .init({
    detection: options,
-    fallbackLng: 'en',
+    // fallbackLng: 'en',
     whitelist: ['it', 'en', 'pt'],
-    debug: true,
+    debug: false,
     resources: {
       en: { translation: { ...enJSON, ...enParole } },
       it: { translation: { ...itJSON } },
-      pt: { translation: { ...ptJSON, ...ptJSON } },
+      pt: { translation: { ...ptJSON, ...ptParole } },
     },
    //   lng: "it",
   });
